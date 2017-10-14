@@ -14,7 +14,7 @@ resource "aws_instance" "bastion" {
 
 resource "aws_security_group" "bastion" {
   name = "bastion"
-  description = "restricted by users's IP"
+  description = "restricted by user ip"
 
   ingress {
     from_port   = 22
