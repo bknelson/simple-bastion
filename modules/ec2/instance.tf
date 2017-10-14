@@ -36,4 +36,5 @@ resource "aws_route53_record" "bastion" {
   name = "${var.name}.${data.aws_route53_zone.dns_zone.name}"
   type = "A"
   records = ["${aws_instance.bastion.public_ip}"]
+  ttl = 60
 }
