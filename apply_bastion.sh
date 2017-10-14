@@ -1,0 +1,1 @@
+terraform apply -var-file="variable.tfvars" modules/ec2

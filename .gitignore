@@ -1,4 +1,3 @@
-.terraform
 variables.tfvars
 .terraform
 terraform.tfstate.d

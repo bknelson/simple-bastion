@@ -1,0 +1,1 @@
+terraform plan -var-file="variable.tfvars" modules/ec2
