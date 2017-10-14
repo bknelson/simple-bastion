@@ -28,3 +28,9 @@ variable "zone_name" {
   type = "string"
   description = "Rt 53 zone name"
 }
+
+variable "region" {
+  type = "string"
+  description = "AWS region to use"
+  default = "us-west-2"
+}

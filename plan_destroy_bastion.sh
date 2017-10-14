@@ -1,1 +1,1 @@
-terraform plan --destroy -var-file="variable.tfvars" modules/ec2
+terraform plan --destroy -var-file="variables.tfvars" modules/ec2

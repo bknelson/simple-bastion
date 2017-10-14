@@ -2,8 +2,8 @@ resource "aws_instance" "bastion" {
   ami = "${var.ami_id}"
   instance_type = "t2.nano"
   key_name = "${var.ssh_key_name}"
-  subnet_id = "${element(split(",", var.subnet_list), -1)}"
-  vpc_security_group_ids = ["${aws_security_group.bastion}"]
+  subnet_id = "${element(split(",", var.subnet_list), 5)}"
+  vpc_security_group_ids = ["${aws_security_group.bastion.id}"]
   associate_public_ip_address = true
 
   tags {
