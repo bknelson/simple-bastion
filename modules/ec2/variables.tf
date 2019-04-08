@@ -1,36 +1,36 @@
 variable "ami_id" {
-  type = "string"
+  type        = "string"
   description = "AMI ID for bastion instance"
-  default = "ami-e689729e"
+  default     = "ami-e689729e"
 }
 
 variable "ssh_key_name" {
-  type = "string"
+  type        = "string"
   description = "Key for default user"
 }
 
 variable "subnet_list" {
-  type = "string"
+  type        = "string"
   description = "Comma delimited list of subnets for location of bastion"
 }
 
 variable "user_ip" {
-  type = "string"
+  type        = "string"
   description = "User's IP"
 }
 
 variable "name" {
-  type = "string"
+  type        = "string"
   description = "Name suffix for bastion"
 }
 
 variable "zone_name" {
-  type = "string"
+  type        = "string"
   description = "Rt 53 zone name"
 }
 
 variable "region" {
-  type = "string"
+  type        = "string"
   description = "AWS region to use"
-  default = "us-west-2"
+  default     = "us-west-2"
 }
