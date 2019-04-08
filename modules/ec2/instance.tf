@@ -5,6 +5,7 @@ resource "aws_instance" "bastion" {
   subnet_id                   = "${element(split(",", var.subnet_list), 5)}"
   vpc_security_group_ids      = ["${aws_security_group.bastion.id}"]
   associate_public_ip_address = true
+  user_data                   = "${data.template_file.userdata.rendered}"
 
   tags {
     Name = "bastion-${var.name}"
