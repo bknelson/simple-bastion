@@ -1,0 +1,13 @@
+#!/bin/bash
+yum update -y
+yum install -y docker
+systemctl start docker
+docker run -it -d \
+    -p 17171:17171 \
+    -p 17179:17179 \
+    --add-host xmage.${zone_name}:0.0.0.0 \
+    -m 2g \
+    -c 512 \
+    -e "XMAGE_DOCKER_SERVER_ADDRESS=xmage.${zone_name}" \
+    -e "XMAGE_DOCKER_SERVER_NAME=xmage-server" \
+    bknelson/xmage:lates
