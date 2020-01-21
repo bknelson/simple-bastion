@@ -8,7 +8,7 @@ resource "aws_instance" "xmage" {
   user_data                   = "${data.template_file.userdata.rendered}"
 
   tags {
-    Name = "xmage-${var.name}"
+    Name = "${var.name}"
     Role = "xmage"
   }
 }
