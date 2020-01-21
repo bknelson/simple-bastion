@@ -1,6 +1,6 @@
 variable "ami_id" {
   type        = "string"
-  description = "AMI ID for bastion instance"
+  description = "AMI ID for xmage instance"
   default     = "ami-e689729e"
 }
 
@@ -11,7 +11,7 @@ variable "ssh_key_name" {
 
 variable "subnet_list" {
   type        = "string"
-  description = "Comma delimited list of subnets for location of bastion"
+  description = "Comma delimited list of subnets for location of xmage"
 }
 
 variable "user_ip" {
@@ -21,7 +21,7 @@ variable "user_ip" {
 
 variable "name" {
   type        = "string"
-  description = "Name suffix for bastion"
+  description = "Name suffix for xmage"
 }
 
 variable "zone_name" {
