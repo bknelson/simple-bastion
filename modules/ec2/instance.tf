@@ -8,8 +8,8 @@ resource "aws_instance" "bastion" {
   user_data                   = "${data.template_file.userdata.rendered}"
 
   tags {
-    Name = "bastion-${var.name}"
-    Role = "bastion"
+    Name = "${var.name}"
+    Role = "xmage"
   }
 }
 
